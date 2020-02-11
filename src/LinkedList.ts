@@ -1,3 +1,5 @@
+import { Sortable } from './Sorter';
+
 class Node {
   // Each node either references the next node or nothing (default nothing)
   next: Node | null = null;
@@ -5,7 +7,7 @@ class Node {
   constructor(public data: number) {}
 }
 
-export class LinkedList {
+export class LinkedList implements Sortable {
   // Head either references the head node, or nothing if the list is empty (default nothing)
   head: Node | null = null;
 
